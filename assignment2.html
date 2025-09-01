@@ -1,11 +1,57 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+  <title>Bus Booking System</title>
 </head>
 <body>
-    
+
+  <!-- Top Bar -->
+  <table width="100%" border="1" cellpadding="10">
+    <tr>
+      <td width="60">
+        <!-- Circular Logo -->
+        <img src="busimg.jpg" alt="Logo" width="60" height="60" style="border-radius:50%;">
+      </td>
+      <td>
+        <h2>Book Sheet</h2>
+      </td>
+    </tr>
+  </table>
+
+  <h2>Welcome to Bus Booking System</h2>
+
+  <form>
+    <p>
+      <label>User Name: </label>
+      <input type="text" name="username">
+    </p>
+
+    <p>
+      <label>User Password: </label>
+      <input type="password" name="password">
+    </p>
+
+    <p>
+      <label>User Gender: </label><br>
+      <input type="radio" name="gender" value="male"> Male
+      <input type="radio" name="gender" value="female"> Female
+    </p>
+
+    <p>
+      <label>User City: </label>
+      <select name="city">
+        <option value="">Select your city</option>
+        <option value="meerut">Meerut</option>
+        <option value="delhi">Delhi</option>
+        <option value="lucknow">Lucknow</option>
+        <option value="kanpur">Kanpur</option>
+      </select>
+    </p>
+
+    <p>
+      <input type="submit" value="Book Sheet">
+    </p>
+  </form>
+
 </body>
 </html>
