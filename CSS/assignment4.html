@@ -1,0 +1,126 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Flipkart-style Navbar Mockup</title>
+  <style>
+    /* Simple, self-contained mockup CSS */
+    :root{
+      --bg:#f5f7fb; --muted:#6b7280; --accent:#2563eb; --card:#fff; --shadow: 0 6px 18px rgba(16,24,40,0.06);
+      font-family: Inter, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial;
+    }
+    body{margin:0;background:var(--bg);color:#111}
+
+    /* Top bar */
+    .topbar{display:flex;align-items:center;gap:20px;padding:14px 28px;background:white;border-bottom:1px solid #eef2f6}
+    .brand{display:flex;align-items:center;gap:10px}
+    .logo{width:128px;height:36px;display:flex;align-items:center;font-weight:700;color:var(--accent);font-size:20px}
+    .logo .dot{color:#f59e0b;margin-left:6px}
+
+    /* Search */
+    .search{flex:1;display:flex;align-items:center;gap:10px}
+    .search input{width:100%;padding:12px 18px;border-radius:24px;border:1px solid #e6eef8;background:#f6f9ff;outline:none;font-size:15px}
+    .search input::placeholder{color:var(--muted)}
+
+    /* Actions on the right */
+    .actions{display:flex;gap:18px;align-items:center}
+    .action{font-size:15px;color:var(--muted);cursor:pointer}
+    .icon-box{display:inline-flex;align-items:center;gap:8px}
+
+    /* Categories strip */
+    .cat-wrap{background:white;padding:18px 28px;margin-top:10px;border-top:1px solid #f1f5f9;border-bottom:1px solid #eef2f6}
+    .cats{display:flex;gap:28px;align-items:center;overflow-x:auto;padding-bottom:6px}
+    .cat{display:flex;flex-direction:column;align-items:center;min-width:110px;flex:0 0 auto;text-align:center;color:#222}
+    .cat .ico{width:64px;height:64px;border-radius:12px;display:flex;align-items:center;justify-content:center;background:linear-gradient(180deg,#fff,#f8fafc);box-shadow:var(--shadow)}
+    .cat p{margin:8px 0 0;font-size:14px;color:var(--muted)}
+    .cat:hover p{color:#111}
+
+    /* make the scrollbar thin and subtle */
+    .cats::-webkit-scrollbar{height:8px}
+    .cats::-webkit-scrollbar-thumb{background:#e2e8f0;border-radius:999px}
+
+    /* Responsive */
+    @media (max-width:800px){
+      .logo{width:96px;font-size:18px}
+      .cat{min-width:92px}
+    }
+
+    /* small helper for caret/dropdown */
+    .caret{font-size:11px;margin-left:6px;color:var(--muted)}
+  </style>
+</head>
+<body>
+  <!-- Top bar -->
+  <header class="topbar">
+    <div class="brand">
+      <div class="logo">Flipkart <span class="dot">+</span></div>
+    </div>
+
+    <div class="search">
+      <input type="search" placeholder="Search for Products, Brands and More" aria-label="Search" />
+    </div>
+
+    <div class="actions">
+      <div class="action">Login</div>
+      <div class="action">Cart</div>
+      <div class="action">Become a Seller</div>
+      <div class="action">⋮</div>
+    </div>
+  </header>
+
+  <!-- Category strip -->
+  <div class="cat-wrap">
+    <nav class="cats" aria-label="Top categories">
+
+      <div class="cat" role="button">
+        <div class="ico">🚀</div>
+        <p>Minutes</p>
+      </div>
+
+      <div class="cat">
+        <div class="ico">📱</div>
+        <p>Mobiles &amp; Tablets</p>
+      </div>
+
+      <div class="cat">
+        <div class="ico">👗</div>
+        <p>Fashion <span class="caret">▾</span></p>
+      </div>
+
+      <div class="cat">
+        <div class="ico">🎧</div>
+        <p>Electronics <span class="caret">▾</span></p>
+      </div>
+
+      <div class="cat">
+        <div class="ico">🛋️</div>
+        <p>Home &amp; Furniture <span class="caret">▾</span></p>
+      </div>
+
+      <div class="cat">
+        <div class="ico">📺</div>
+        <p>TVs &amp; Appliances</p>
+      </div>
+
+      <div class="cat">
+        <div class="ico">✈️</div>
+        <p>Flight Bookings</p>
+      </div>
+
+      <div class="cat">
+        <div class="ico">🧸</div>
+        <p>Beauty, Food.. <span class="caret">▾</span></p>
+      </div>
+
+      <div class="cat">
+        <div class="ico">🛒</div>
+        <p>Grocery</p>
+      </div>
+
+    </nav>
+  </div>
+
+  <!-- Notes: This is a static mockup. Replace emoji icons with SVG or image assets for production. -->
+</body>
+</html>
