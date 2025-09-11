@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Counter App</title>
+  <style>
+    .logo {
+      position: absolute;
+      top: 15px;
+      left: 15px;
+      width: 50px;
+    }
+    .heading{
+        position: top;
+        text-align: center;
+        
+    }
+    
+    .container {
+      text-align: center;
+      background: white;
+    }
+    h1 {
+      font-size: 48px;
+      margin: 20px 0;
+      color: #333;
+    }
+    button {
+      padding: 12px 24px;
+      margin: 10px;
+      font-size: 22px;
+    }
+    .increment {
+      background: #f44336;
+      color: white;
+    }
+    .increment:hover {
+      background: #d32f2f;
+    }
+    .decrement {
+      background: #4caf50;
+      color: white;
+    }
+    .decrement:hover {
+      background: #388e3c;
+    }
+  </style>
+</head>
+<body>
+    <img src="https://t4.ftcdn.net/jpg/16/29/24/49/360_F_1629244992_eyZM8mtuztomQGXnYA6TZlTc2qCV54Rr.jpg" 
+       alt="Logo" 
+       class="logo">
+    
+  <div class="container">
+    <h1 class="heading"> counter</h1>
+    <h1 id="counter">0</h1>
+    <button class="increment" onclick="decrement()">-</button>
+    <button class="decrement" onclick="increment()">+</button>
+  </div>
+
+  <script>
+    let count = 0;
+    const counterDisplay = document.getElementById("counter");
+
+    function increment() {
+      if (count == 10) {
+        alert("Counter cannot be more than 10");
+      } else {
+        count++;
+        counterDisplay.innerText = count;
+      }
+    }
+
+    function decrement() {
+      if (count == 0) {
+        alert("Counter cannot be less than 0");
+      } else {
+        count--;
+        counterDisplay.innerText = count;
+      }
+    }
+  </script>
+</body>
+</html>
