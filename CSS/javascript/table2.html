@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tables Example</title>
+</head>
+<body>
+    <script>
+        let even = [];
+        let odd = [];
+        let e = 0, o = 0;
+
+        document.writeln("<b>Table of 5:</b><br>");
+        for (let x = 1; x <= 10; x++) {
+            let j = x * 5;
+            document.writeln(j + "<br>");
+            if (j % 2 === 0) {
+                e++;
+                even.push(j);
+            } else {
+                o++;
+                odd.push(j);
+            }
+        }
+
+        document.writeln("<br><b>Table of 3:</b><br>");
+        for (let y = 1; y <= 10; y++) {
+            let z = y * 3;
+            document.writeln(z + "<br>");
+            if (z % 5 === 0) {
+                continue; // skip numbers divisible by 5
+            } else if (z % 2 === 0) {
+                e++;
+                even.push(z);
+            } else {
+                o++;
+                odd.push(z);
+            }
+        }
+
+        document.writeln("<br><b>Even numbers collected:</b> " + even.join(", ") + "<br>");
+        document.writeln("<b>Odd numbers collected:</b> " + odd.join(", ") + "<br>");
+        document.writeln("<b>Total Even Count:</b> " + e + "<br>");
+        document.writeln("<b>Total Odd Count:</b> " + o + "<br>");
+    </script>
+</body>
+</html>
