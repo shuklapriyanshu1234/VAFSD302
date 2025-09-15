@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  
+</head>
+<body>
+
+  
+  <!-- <h3>IT Class Students</h3> -->
+  <div id="itStudents"></div>
+
+  <!-- <h3>Other Class Students</h3> -->
+  <div id="otherStudents"></div>
+
+  <script>
+    
+    const students = [
+      { name: "piyush", roll: 1, class: "IT" },
+      { name: "tanuj", roll: 2, class: "IT" },
+      { name: "devansh", roll: 3, class: "IT" },
+      { name: "puneet", roll: 4, class: "CE" },
+      { name: "uday", roll: 5, class: "CSE" }
+    ];
+
+    
+    const itStudents = [];
+    const otherStudents = [];
+
+   
+    for (let i = 0; i < students.length; i++) {
+      if (students[i].class === "IT") {
+        itStudents.push(students[i]);
+      } else {
+        otherStudents.push(students[i]);
+      }
+    }
+
+    
+    function studentsToHTMLList(studentArray) {
+      let html = "<ul>";
+      for (let i = 0; i < studentArray.length; i++) {
+        html += `<li>${studentArray[i].name} - Roll No: ${studentArray[i].roll} - Class: ${studentArray[i].class}</li>`;
+      }
+      html += "</ul>";
+      return html;
+    }
+
+    
+    document.getElementById("itStudents").innerHTML = studentsToHTMLList(itStudents);
+    document.getElementById("otherStudents").innerHTML = studentsToHTMLList(otherStudents);
+  </script>
+
+</body>
+</html>
