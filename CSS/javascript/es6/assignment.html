@@ -1,31 +1,75 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=<device-width>, initial-scale=1.0">
-    <title>Resume</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Your Name - Resume</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 40px;
+      background: #f4f4f4;
+      color: #333;
+    }
+    .container {
+      max-width: 800px;
+      margin: auto;
+      background: white;
+      padding: 30px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+    h1, h2, h3 {
+      color: #222;
+    }
+    hr {
+      border: 0;
+      border-top: 2px solid #ddd;
+      margin: 20px 0;
+    }
+    .section {
+      margin-bottom: 25px;
+    }
+    .job-title {
+      font-weight: bold;
+    }
+    .date {
+      float: right;
+      color: #999;
+    }
+    ul {
+      padding-left: 20px;
+    }
+  </style>
 </head>
 <body>
-    <div class="container" id="form-container">
-    <h2>Resume</h2>
-    <form id="resumeForm">
-      <label><h1>Your Name</h1></label>
-      <input type="text" id="name" placeholder="Enter your name" >
+  <div class="container">
+    <header>
+      <h1>Priyanshu Shukla</h1>
+      <p>Email: shuklapriyanshu666@gmail.com | Phone: 9151322011</p>
+    </header>
 
-      <label>Class / Education</label>
-      <input type="text" id="class" placeholder="e.g. B.Tech" >
+    <hr>
 
-      <label>Skills</label>
-      <input type="text" id="skills" placeholder=" HTML, CSS, JS">
-      <label>Skills</label>
-      <input type="text" id="skills" placeholder="Enter your address">
+    <section class="section">
+      <h2>Professional Summary</h2>
+      <p>Results-driven professional with 3 months of experience in Web development. Skilled in React. Proven ability to achievement or responsibility.</p>
+    </section>
 
-      <label>Address</label>
-      <textarea id="address" placeholder="Enter your address"></textarea>
+    <section class="section">
+      
+    <section class="section">
+      <h2>Education</h2>
+      <h3>B.TECH in Computer Engineering</h3>
+    </section>
 
-      <button type="submit">Submit</button>
-    </form>
+    <section class="section">
+      <h2>Skills</h2>
+      <ul>
+        <li>React</li>
+        <li>typescript</li>
+        <li>tailwind css</li>
+      </ul>
+    </section>
   </div>
-
 </body>
 </html>
