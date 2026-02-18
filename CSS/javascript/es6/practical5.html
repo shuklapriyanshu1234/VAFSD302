@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Simple Interest Calculator</title>
+  <style>
+    .content-box {
+            width: 80%; /* Adjust width as needed */
+            max-width: 600px; /* Maximum width for larger screens */
+            padding: 20px;
+            background-color: white;
+            border: 1px solid #ccc;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            text-align: center; /* Centers text within the box */
+        }
+  </style>
+</head>
+<body>
+    <div class="content-box">
+  <h1>Simple Interest (SI) Calculator</h1>
+  <form id="siForm">
+    <label for="principal">Principal (P): </label>
+    <input id="principal" name="principal" type="number" required><br><br>
+
+    <label for="rate">Rate of Interest (R) % per annum: </label>
+    <input id="rate" name="rate" type="number" required><br><br>
+
+    <label for="time">Time (T) in years: </label>
+    <input id="time" name="time" type="number" required><br><br>
+
+    <button type="submit">Calculate SI</button>
+    <button type="button" id="reset">Reset</button>
+  </form>
+  <p id="result"></p>
+    </div>
+
+  <script>
+    const form = document.getElementById('siForm');
+    const principalInput = document.getElementById('principal');
+    const rateInput = document.getElementById('rate');
+    const timeInput = document.getElementById('time');
+    const result = document.getElementById('result');
+    const resetBtn = document.getElementById('reset');
+
+    form.addEventListener('submit', function(e){
+      e.preventDefault();
+
+      let p = parseFloat(principalInput.value);
+      let r = parseFloat(rateInput.value);
+      let t = parseFloat(timeInput.value);
+
+      if(isNaN(p) || isNaN(r) || isNaN(t)){
+        result.textContent = "Please enter valid numbers for P, R, and T.";
+        return;
+      }
+
+      let si = (p * r * t) / 100;
+      result.textContent = `Simple Interest (SI) = ${si}`;
+    });
+
+    resetBtn.addEventListener('click', function(){
+      form.reset();
+      result.textContent = '';
+    });
+  </script>
+</body>
+</html>
