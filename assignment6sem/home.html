@@ -11,74 +11,69 @@
 
     <!-- NAVBAR -->
     <nav style="
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    padding:16px 50px;
+    background-color:#1e293b;
+    color:white;
+    box-shadow:0 4px 10px rgba(0,0,0,0.2);
+">
+
+    <!-- Logo -->
+    <div style="
         display:flex;
         align-items:center;
-        justify-content:space-between;
-        padding:16px 50px;
-        background-color:#1e293b;
-        color:white;
-        box-shadow:0 4px 10px rgba(0,0,0,0.2);
     ">
-        <div style="
-            font-size:26px;
-            font-weight:bold;
-            letter-spacing:2px;
-            cursor:pointer;
-        ">
-            L
-        </div>
+        <img src="https://avatars.githubusercontent.com/u/48626910?s=280&v=4" 
+             alt="Logo"
+             style="
+                height:45px;
+                width:45px;
+                border-radius:50%;
+                object-fit:cover;
+             ">
+    </div>
 
-        <ul style="
-            list-style:none;
-            display:flex;
-            gap:25px;
-            margin:0;
-            padding:0;
-        ">
-            <li>
-                <a href="/" style="
-                    color:white;
-                    text-decoration:none;
-                    padding:8px 14px;
-                    border-radius:6px;
-                    transition:0.3s;
-                "
-                onmouseover="this.style.background='#334155'"
-                onmouseout="this.style.background='transparent'">
-                Home
-                </a>
-            </li>
+    <!-- Navigation Links -->
+    <ul style="
+        list-style:none;
+        display:flex;
+        gap:25px;
+        margin:0;
+        padding:0;
+        align-items:center;
+    ">
+        <li>
+            <a href="/" style="
+                color:white;
+                text-decoration:none;
+                font-size:16px;
+            ">Home</a>
+        </li>
 
-            <li>
-                <a href="/course" style="
-                    color:white;
-                    text-decoration:none;
-                    padding:8px 14px;
-                    border-radius:6px;
-                    transition:0.3s;
-                "
-                onmouseover="this.style.background='#334155'"
-                onmouseout="this.style.background='transparent'">
-                Course
-                </a>
-            </li>
+        <li>
+            <a href="/course" style="
+                color:white;
+                text-decoration:none;
+                font-size:16px;
+            ">Course</a>
+        </li>
 
-            <li>
-                <a href="/login" style="
-                    color:white;
-                    text-decoration:none;
-                    padding:8px 14px;
-                    border-radius:6px;
-                    background:#2563eb;
-                    transition:0.3s;
-                "
-                onmouseover="this.style.background='#1d4ed8'"
-                onmouseout="this.style.background='#2563eb'">
-                Login
-                </a>
-            </li>
-        </ul>
-    </nav>
+        <li>
+            <a href="/login" style="
+                color:white;
+                text-decoration:none;
+                font-size:16px;
+                padding:6px 12px;
+                background:#2563eb;
+                border-radius:6px;
+            ">Login</a>
+        </li>
+    </ul>
+
+</nav>
+
 
     <!-- MAIN CONTENT -->
     <div style="
@@ -101,7 +96,7 @@
             border-radius:12px;
             box-shadow:0 8px 20px rgba(0,0,0,0.2);
         ">
-            Image College
+            <img src="https://avatars.githubusercontent.com/u/48626910?s=280&v=4" alt="">
         </div>
 
         <h1 style="
