@@ -19,7 +19,9 @@
 
 const express=require('express');
 const app=express();
-const port=4700;
+const port=4100;
+
+app.use(express.json());
 // database(json)
 const students=[
     {
@@ -63,6 +65,70 @@ app.get('/about/:id',(req,res)=>{
     }
 })
 
+
+
+
+// data is create
+app.post('/add',(req,res)=>{
+    try{
+        const newstudent={
+            id:students.length+1,
+            ...req.body                            // ... for destructuring
+        }
+        students.push(newstudent);
+        res.status(200).json({message:"student data is add successful",data:newstudent});
+
+
+    }
+    catch(error){
+        res.status(500).json({message:"error adding data",error:error.message});
+    }
+})
+
+
+
+
+
+//data update
+app.put('/edit/:id',(req,res)=>{
+    try{
+        const id=req.params.id;
+        const index=students.findIndex(s=>s.id==id);
+        if(index==-1){
+            return res.status(404).json({message:"student data is not found"});
+        }
+        students[index]={
+            ...students[index],
+            ...req.body
+        }
+        res.status(200).json({message:"student data is update successful",data:students[index]});
+
+    }
+    catch(error){
+        res.status(500).json({message:"error updating data",error:error.message});
+    }
+})
+
+
+
+
+//data delete
+app.delete('/delete/:id',(req,res)=>{
+    try{
+        const  id=req.params.id;
+        const index=students.findIndex(s=>s.id==id);
+        if(index==-1){
+            return res.status(404).json({message:"student data is not found"});
+        }
+        students.splice(index,1);
+        res.status(200).json({message:"student data is delete successful",data:students});
+
+    }
+     catch(error){
+        res.status(500).json({message:"error deleting data",error:error.message});
+    }
+
+})
 app.listen(port,()=>{
     console.log(`server is run at http://localhost:${port}`);
 })
